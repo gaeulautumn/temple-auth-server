@@ -1,3 +1,6 @@
+group = 'com.temple'
+version = '0.0.1-SNAPSHOT'
+
 subprojects {
     version '1.0-SNAPSHOT'
     apply plugin: 'java'
