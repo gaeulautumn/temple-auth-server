@@ -32,17 +32,6 @@ public class UserService implements UserDetailsService{
         return userRepository.save(user);
     }
 
-    @PostConstruct
-    public void init(){
-        User autumn = userRepository.findByUsername("autumn");
-        if(autumn == null){
-            User user = new User();
-            user.setUsername("autumn");
-            user.setPassword("pass");
-            System.out.println(this.save(user));
-        }
-    }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);

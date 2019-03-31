@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    platform: h2
+    jdbc-url: jdbc:h2:tcp://localhost:9092/mem:temple;MVCC=true
+    username: temple
+    password: temple
+    dirver-class-name: org.h2.Driver
+    data: classpath:sql/insert.sql
+  jpa:
+    database-plaform: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8081
+
+#server.context.path=/auth
+#security.basic.enabled=false
+#security.oauth2.client.client-id=id
+#security.oauth2.client.client-secret=secret
+#spring.security.user.name=user
+#spring.security.user.password=pass
+#spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+#spring.datasource.url=jdbc:mariadb://varifind.tests.parseq.pro:5432/varifind-core-boot2
+#spring.datasource.platform=postgresql
+#spring.datasource.continue-on-error=true
+#spring.datasource.username=postgres
+#spring.datasource.password=postgres
