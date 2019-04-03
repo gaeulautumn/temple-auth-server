@@ -1,3 +1,5 @@
 rootProject.name = 'temple'
 
 include 'auth-server'
+include 'auth-lib'
+

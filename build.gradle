@@ -6,7 +6,6 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'eclipse'
 
-
     compileJava {
         sourceCompatibility = 1.8
     }
@@ -20,7 +19,6 @@ subprojects {
     }
 
     dependencies {
-        // https://mvnrepository.com/artifact/junit/junit
         testCompile group: 'junit', name: 'junit', version: '4.12'
     }
 }

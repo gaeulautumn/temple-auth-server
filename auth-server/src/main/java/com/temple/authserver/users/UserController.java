@@ -12,14 +12,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @GetMapping("/user")
-    public List<User> listUser(){
+    public List<TestUser> listUser(){
         return userService.findAll();
     }
 
     @PostMapping("/user")
-    public User create(@RequestBody User user){
+    public TestUser create(@RequestBody TestUser user){
         return userService.save(user);
     }
 

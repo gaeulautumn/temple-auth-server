@@ -9,8 +9,9 @@ import javax.persistence.Table;
 
 @Entity
 @Data
-@Table(name = "user")
-public class User {
+@Table(name = "test_user")
+@Deprecated
+public class TestUser {
     @Id
     @GeneratedValue
     private Long id;
