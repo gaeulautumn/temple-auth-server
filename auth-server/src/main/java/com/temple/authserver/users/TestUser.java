@@ -5,11 +5,13 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Data
-public class User {
-
+@Table(name = "test_user")
+@Deprecated
+public class TestUser {
     @Id
     @GeneratedValue
     private Long id;

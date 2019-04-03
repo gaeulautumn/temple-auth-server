@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    platform: h2
+    jdbc-url: jdbc:mariadb://localhost:5432/temple
+    username: temple
+    password: temple
+    dirver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    database-plaform: mariadb
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8081
