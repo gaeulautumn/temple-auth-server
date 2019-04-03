@@ -15,9 +15,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
 @EnableAuthorizationServer
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @Configuration
-public class AuthServerConfig extends AuthorizationServerConfigurerAdapter{
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private TokenStore tokenStore;
@@ -30,12 +29,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter{
 
     @Autowired
     private UserDetailsService userDetailsService;
-//
-//    @Override
-//    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-//        security.tokenKeyAccess("permitAll()")
-//                .checkTokenAccess("isAuthenticated()");
-//    }
+
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -43,7 +37,8 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter{
                 .withClient("iamclient")
                 .secret(passwordEncoder.encode("iamsecret"))
                 .authorizedGrantTypes("authorization_code", "password", "refresh_token")
-                .scopes("read", "write", "trust")
+                .scopes("read")
+                .redirectUris("http://www.naver.com")
                 .accessTokenValiditySeconds(60*60)
                 .refreshTokenValiditySeconds(6*60*60)
                 .autoApprove(true);
