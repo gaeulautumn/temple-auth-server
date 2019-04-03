@@ -1,5 +1,6 @@
 package com.temple.authserver.users;
 
+import com.temple.authlib.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,12 +14,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/user")
-    public List<TestUser> listUser(){
+    public List<User> listUser(){
         return userService.findAll();
     }
 
     @PostMapping("/user")
-    public TestUser create(@RequestBody TestUser user){
+    public User create(@RequestBody User user){
         return userService.save(user);
     }
 
