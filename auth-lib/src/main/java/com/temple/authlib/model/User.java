@@ -14,7 +14,7 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long no;
 
-    String name;
+    String username;
 
     String password;
 
